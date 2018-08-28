@@ -4,7 +4,7 @@ export default {
     template: `
       <section class="pre-msg" @click="openMsgs">
           <div class="flex align-center">
-            <img class="userdetails-img" :src=msg.userdetails.img>
+            <img class="userdetails-img" :src="msg.userdetails.img">
             {{msg.userdetails.fullName}}
         </div>
       </section>
