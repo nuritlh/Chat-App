@@ -12,8 +12,8 @@ export default {
           <filterInbox ></filterInbox>
           <inboxList :allMsg="allMsg" v-on:selected="selectedMsg"></inboxList>
         </div>
-        <div class="msg-details-container height-100">
-          <msgDetails class=" height-100" v-if="selectedChat" :selectedChat="selectedChat"></msgDetails>
+        <div class="msg-details-container height-100" :class="{'display-none':hideMsgsContainer}">
+          <msgDetails class=" height-100" v-if="selectedChat" :selectedChat="selectedChat" v-on:close="closeMsg"></msgDetails>
         </div>
     </section>
     `,
@@ -21,19 +21,26 @@ export default {
   data() {
     return {
       allMsg: [],
-      selectedChat: null
+      selectedChat: null,
+      hideMsgsContainer: false
     }
   },
   created() {
     appService.query().then(allMsg => {
       this.allMsg = allMsg;
+      this.hideMsgsContainer = false;
       this.selectedChat = allMsg[0]
     });
   },
   methods: {
     selectedMsg(msg) {
       this.selectedChat = msg
+      this.hideMsgsContainer = false;
       console.log('selectedChat', msg);
+    },
+    closeMsg() {
+      this.selectedChat = null;
+      this.hideMsgsContainer = true
     }
   }
 };

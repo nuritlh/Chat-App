@@ -8,7 +8,9 @@ export default {
         <div class="flex height-100">
           <div class="height-100">
             <div class="details-msg">
-              <div class="from-user">{{selectedChat.userdetails.fullName}}</div>
+              <div class="from-user">{{selectedChat.userdetails.fullName}}
+              <button class="close-btn" @click="closeMsgs">X</button> 
+              </div>
               <div class="msg-container">
                 <renderMsg v-for="(msg, idx) in selectedChat.msgs" :key="idx" :msg="msg"></renderMsg>
               </div>
@@ -19,6 +21,7 @@ export default {
             </div>
           </div>
           <div class="user-details">
+             
             <img class="details-user-img" :src=selectedChat.userdetails.img>
             <div class="text-center user-details-name">{{selectedChat.userdetails.fullName}}</div>
           </div>
@@ -28,7 +31,7 @@ export default {
   components: { renderMsg },
   data() {
     return {
-      txt: ''
+      txt: '',
     }
   },
   computed: {},
@@ -44,6 +47,9 @@ export default {
       appService.addNewMsg(newMsgSent).then(chatId => {
         this.txt = ''
       })
+    },
+    closeMsgs() {
+      this.$emit('close');
     }
   }
 };

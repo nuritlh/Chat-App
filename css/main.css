@@ -197,6 +197,8 @@ a {
 }
 
 .from-user {
+  display: flex;
+  justify-content: space-between;
   opacity: 0.8;
   color: #293037;
   font-size: 14px;
@@ -204,6 +206,14 @@ a {
   line-height: 38px;
   border-bottom: 1px solid #ccc;
   padding: 5px;
+}
+.close-btn{
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+.close-btn:hover {
+  background-color: #ccc
 }
 
 .selected-msg{
@@ -278,6 +288,7 @@ a {
 
 
 @media only screen and (max-width: 1000px) {
-
-
+  .msg-details-container {
+  position: absolute;
+  left: 7%;}
 }
