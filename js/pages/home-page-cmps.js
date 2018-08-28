@@ -6,13 +6,15 @@ import msgDetails from '../cmps/msgDetails.js'
 
 export default {
   template: `
-    <section class="home-page flex wrap">
+    <section class="home-page flex wrap height-100 container">
         <folders ></folders>
         <div class="user-msgs-list">
           <filterInbox ></filterInbox>
           <inboxList :allMsg="allMsg" v-on:selected="selectedMsg"></inboxList>
         </div>
-        <msgDetails  v-if="selectedChat" :selectedChat="selectedChat"></msgDetails>
+        <div class="msg-details-container height-100">
+          <msgDetails class=" height-100" v-if="selectedChat" :selectedChat="selectedChat"></msgDetails>
+        </div>
     </section>
     `,
   components: { folders, filterInbox, inboxList, msgDetails },

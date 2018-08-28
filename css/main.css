@@ -9,6 +9,8 @@
 
 html,
 body {
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: Roboto, cursive;
@@ -73,28 +75,42 @@ a {
   text-align: center
 }
 
+.height-100{
+  height: 100%;
+}
 
+.container {
+  max-width: 980px;
+  margin: 0 auto
+}
 
 /* --------------------home-page---------------- */
 
+.home-page{
+  height: 100%;
+}
 .user-msgs-list{
-  width: 300px;
+  width: 25%;
   padding: 20px;
   background-image: linear-gradient(-67deg, #242a31 0%, #2d343c 100%);
 }
 
 
 /* --------------------folders---------------- */
-
+.folders{
+  height: 100%;
+  width: 7%
+}
 .nav-bar{
   width: 80px;
-  height: 1000px;
+  height: 100%;
   background-color: #1d232a;
 }
 .nav-btn{
   padding: 23px 0 0 30px;
   margin: 0 0 40px 0;
   font-size: 1.5em;
+  cursor: pointer;
 }
 .icon-img{
   width: 30px;
@@ -103,11 +119,15 @@ a {
   cursor: pointer;
 }
 .inbox-nav{
-  position: relative;
-  width: 230px;
-  animation-name: openBae;
-  opacity: 1;
-  animation-duration: 1s;
+  position: absolute;
+    z-index: 3;
+    top: 12%;
+    width: 250px;
+    height: 100%;
+    animation-name: openBae;
+    opacity: 1;
+    animation-duration: 1s;
+    background-image: linear-gradient(-67deg, #1d232a 0%, #282f37 100%);
 }
 @keyframes openBae {
   from {opacity: 0;}
@@ -127,10 +147,12 @@ a {
   cursor: pointer;
 }
 
+
 /* --------------------filter---------------- */
 
 .search-input{
     margin: 0 0 40px 0;
+    padding: 10px;
     width: 95%;
     height: 40px;
     border: none;
@@ -158,9 +180,18 @@ a {
 
 /* --------------------details-msg---------------- */
 
+.msg-details-container {
+  width: 68%;
+}
+.msg-container {
+  height: 94%;
+    overflow-y: scroll;
+}
+
 .details-msg {
+  height: 91%;
   width: 500px;
-  padding: 20px;
+  padding: 20px 0 20px 20px;
   background-color: #aab0b9;
   background-image: linear-gradient(to bottom, #eceef2 0%, rgba(236, 238, 242, 0) 100%);
 }
@@ -206,6 +237,7 @@ a {
 }
 .my-msg{
   flex-direction: row-reverse;
+  margin: 0 20px 0 0;
 }
 .my-taxt-mag-body{
   margin: 0 30px 0 0;
@@ -242,4 +274,10 @@ a {
 .send{
   font-size: 2em;
   color: #ccc;
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+
 }

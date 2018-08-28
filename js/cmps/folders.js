@@ -1,7 +1,7 @@
 export default {
     template: `
             <section class="folders">
-                <div class="flex">
+                <div class="flex height-100">
                     <div class="nav-bar flex flex-col">
                         <i @click="openNavBar" class="fas fa-bars nav-btn"></i>
                         <img class="icon-img" src="./img/icons/W.png">

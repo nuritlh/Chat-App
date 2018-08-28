@@ -5,16 +5,18 @@ export default {
   props: ['selectedChat'],
   template: `
       <section >
-        <div class="flex">
-          <div>
-          <div class="details-msg">
-            <div class="from-user">{{selectedChat.userdetails.fullName}}</div>
-            <renderMsg v-for="(msg, idx) in selectedChat.msgs" :key="idx" :msg="msg"></renderMsg>
-          </div>
-          <div class="flex align-center new-msg">
-            <input  @keyup.enter="sendMsg" class="text-msg" v-model="txt" type="text" placeholder="Type your message...">
-            <div @click="sendMsg" class="send"><i class="fas fa-arrow-circle-right"></i></div>
-          </div>
+        <div class="flex height-100">
+          <div class="height-100">
+            <div class="details-msg">
+              <div class="from-user">{{selectedChat.userdetails.fullName}}</div>
+              <div class="msg-container">
+                <renderMsg v-for="(msg, idx) in selectedChat.msgs" :key="idx" :msg="msg"></renderMsg>
+              </div>
+            </div>
+            <div class="flex align-center new-msg">
+              <input  @keyup.enter="sendMsg" class="text-msg" v-model="txt" type="text" placeholder="Type your message...">
+              <div @click="sendMsg" class="send"><i class="fas fa-arrow-circle-right"></i></div>
+            </div>
           </div>
           <div class="user-details">
             <img class="details-user-img" :src=selectedChat.userdetails.img>
