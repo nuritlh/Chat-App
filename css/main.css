@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('../lib/fonts/Roboto/Roboto-Regular.ttf');
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, cursive;
+  background-image: linear-gradient(-67deg, #1d232a 0%, #282f37 100%);
+  color:#ffffff
+}
+/* --------------------helper---------------- */
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.clean-list {
+  list-style-type: none;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.justify-center {
+  justify-content: center;
+}
+.wrap {
+  flex-wrap: wrap
+}
+
+input {
+  padding: 5px;
+}
+
+img {
+  width: 100%;
+}
+button {
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+a {
+  text-decoration: none;
+}
+.display-none {
+  display: none;
+}
+
+.text-center {
+  text-align: center
+}
+
+
+
+/* --------------------home-page---------------- */
+
+.user-msgs-list{
+  width: 300px;
+  padding: 20px;
+  background-image: linear-gradient(-67deg, #242a31 0%, #2d343c 100%);
+}
+
+
+/* --------------------folders---------------- */
+
+.nav-bar{
+  width: 80px;
+  height: 1000px;
+  background-color: #1d232a;
+}
+.nav-btn{
+  padding: 23px 0 0 30px;
+  margin: 0 0 40px 0;
+  font-size: 1.5em;
+}
+.icon-img{
+  width: 30px;
+  height: 30px;
+  margin: 20px;
+  cursor: pointer;
+}
+.inbox-nav{
+  position: relative;
+  width: 230px;
+  animation-name: openBae;
+  opacity: 1;
+  animation-duration: 1s;
+}
+@keyframes openBae {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.inbox-header{
+  margin: 0 0 40px 0;
+}
+.inbox {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.inbox-list li {
+  margin: 0 0 30px 0;
+  cursor: pointer;
+}
+
+/* --------------------filter---------------- */
+
+.search-input{
+    margin: 0 0 40px 0;
+    width: 95%;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    background-color: #363d45;
+}
+
+
+/* --------------------pre-msg---------------- */
+
+.pre-msg{
+  margin: 20px 0;
+  cursor: pointer;
+}
+.userdetails-img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 20px 0 0;
+}
+.right{
+  float: right;
+}
+
+
+/* --------------------details-msg---------------- */
+
+.details-msg {
+  width: 500px;
+  padding: 20px;
+  background-color: #aab0b9;
+  background-image: linear-gradient(to bottom, #eceef2 0%, rgba(236, 238, 242, 0) 100%);
+}
+
+.from-user {
+  opacity: 0.8;
+  color: #293037;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 38px;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+}
+
+.selected-msg{
+  margin: 10px 0;
+  opacity: 0.9;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+.chat-img{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin: 0 30px 0 0;
+}
+.my-chat-img{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.date-at{
+  font-size: 0.7em
+}
+
+.taxt-mag-body {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+}
+.my-msg{
+  flex-direction: row-reverse;
+}
+.my-taxt-mag-body{
+  margin: 0 30px 0 0;
+}
+
+.user-details{
+  width: 200px;
+  padding: 100px 20px;
+  background-color: #ffffff;
+  color: #293037;
+}
+.details-user-img{
+  border-radius: 50%
+}
+
+.user-details-name {
+  color: #293037;
+  font-family: Roboto;
+  font-weight: 800;
+  line-height: 38px;
+}
+
+.new-msg {
+  background-color: #ffffff;
+}
+.text-msg {
+  padding: 20px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1em;
+  border: none;
+}
+.send{
+  font-size: 2em;
+  color: #ccc;
+}
